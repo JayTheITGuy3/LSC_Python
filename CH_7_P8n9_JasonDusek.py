@@ -12,17 +12,18 @@ def sepia():
 
     for y in range(picture.getHeight()):
         for x in range(picture.getWidth()):
-            (r,g,b) = picture.getPixel(x, y)
+            (red,green,blue) = picture.getPixel(x, y)
+            if red < 63:
+                red = int(red * 1.1)
+                blue = int(blue * 0.9)
+            elif red < 192
+                 red = int(red * 1.15)
+                blue = int(blue * 0.85)
+            else:
+                red = min(int(red * 1.08), 255)
+                blue = int(blue * 0.93)
 
-            newR = (0.393 * r + 0.769 * g + 0.189 * b)
-            newG = (0.349 * r + 0.686 * g + 0.168 * b)
-            newB = (0.272 * r + 0.534 * g + 0.131 * b)
-
-            if newR > 255: newR = 255
-            if newG > 255: newG = 255
-            if newB > 255: newB = 255
-
-            picture.setPixel(x,y,(newR,newG,newB))
+            picture.setPixel(x,y,(red,green,blue))
 
     picture.draw()
 
