@@ -2,7 +2,7 @@
 
 Program: ch7_P8_PeggyWalsh.py
 
-Author: Peggy Walsh
+Authors: Peg Walsh, Jeremy Hinz, Jason Dusek
 
 Description: Write and test a function named sepia that converts a
 color image to sepia. Function should first call grayscale to
