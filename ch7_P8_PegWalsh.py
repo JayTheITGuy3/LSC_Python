@@ -12,7 +12,7 @@ convert the color image to grayscale.
 from images import Image
 
 
-def grayscale(image, result_name):
+def grayscale(image):
     image = Image("smokey.gif")
     result = Image.new("RGB", image.getHeight, image.getWidth)
     for y in range(image.getHeight()):
@@ -24,7 +24,7 @@ def grayscale(image, result_name):
             lum = r + g + b
             image.setPixel(x, y, (lum, lum, lum))
             image.draw()
-    result.save(result_name, "JPEG")
+  
     
 
 
